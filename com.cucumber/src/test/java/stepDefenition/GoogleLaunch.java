@@ -19,7 +19,7 @@ public class GoogleLaunch {
 
 	@Given("Open chrome browser")
 	public void open_chrome_browser() {
-		System.out.println("Chrome Browser Opened");
+		System.out.println("Chrome Browser Opened.");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -29,13 +29,13 @@ public class GoogleLaunch {
 
 	@When("The URL is Launched")
 	public void the_url_is_launched() {
-		System.out.println("URL Launched");
+		System.out.println("URL Launched.");
 		driver.get("https://www.google.com");
 	}
 
 	@Then("Will get the Page Title")
 	public void will_get_the_page_title() {
-		System.out.println("Title of the page retrieved");
+		System.out.println("Title of the page retrieved.");
 		title = driver.getTitle();
 		System.out.println("Title of the page is : "+title+".");
 	}
